@@ -22,8 +22,13 @@ function adicionarBalao() {
   containerBaloes.appendChild(elementoImg);
 
   console.log("Elemento Img =>", elementoImg);
+  elementoImg.addEventListener ("click",function(){removerbalao(this)});
 }
 
 setInterval(adicionarBalao, 3000); //3000 milesegundos = 3 segundos
 
 // adicionarBalao();
+
+function removerbalao(objeto){
+  const balao_apagado = objeto.remove();
+}
